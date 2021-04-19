@@ -25,11 +25,12 @@ class BetterRadarTest {
         Executor executor = Runnable::run;
         BetterRadar betterRadar = new BetterRadar(batteryMock, sampleRocketCount, executor);
         Scud enemyMissile = new Scud();
-        
-        doNothing().when(batteryMock).launchPatriot(enemyMissile);
+
+        doNothing().when(batteryMock)
+                   .launchPatriot(enemyMissile);
         // when
         betterRadar.notice(enemyMissile);
-        
+
         // then
         verify(batteryMock, times(sampleRocketCount)).launchPatriot(enemyMissile);
     }

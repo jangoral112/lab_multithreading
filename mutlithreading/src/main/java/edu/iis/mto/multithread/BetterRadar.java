@@ -4,13 +4,13 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
 public class BetterRadar {
-    
+
     final int rocketCount;
-    
+
     private PatriotBattery battery;
-    
+
     private Executor executor;
-    
+
     public BetterRadar(PatriotBattery patriotBattery, int rocketCount, Executor executor) {
         this.battery = patriotBattery;
         this.rocketCount = rocketCount;
